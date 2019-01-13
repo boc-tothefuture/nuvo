@@ -1,8 +1,8 @@
 package org.nuvo.message.receive
 
 import mu.KotlinLogging
-import org.greenrobot.eventbus.EventBus
 import org.nuvo.MessageQueue
+import org.nuvo.bus.EventBus
 import org.nuvo.event.Status
 import org.nuvo.event.TrackStatus
 

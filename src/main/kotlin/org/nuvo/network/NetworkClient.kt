@@ -7,8 +7,8 @@ import io.ktor.network.sockets.openWriteChannel
 import io.ktor.util.KtorExperimentalAPI
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
-import org.greenrobot.eventbus.EventBus
 import org.nuvo.MessageQueue
+import org.nuvo.bus.EventBus
 import java.net.InetSocketAddress
 
 @KtorExperimentalAPI

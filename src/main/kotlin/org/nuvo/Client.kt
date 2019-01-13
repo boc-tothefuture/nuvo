@@ -1,7 +1,7 @@
 package org.nuvo
 
 import mu.KotlinLogging
-import org.greenrobot.eventbus.EventBus
+import org.nuvo.bus.EventBus
 import org.nuvo.event.Status
 import org.nuvo.message.transmit.*
 import org.nuvo.network.NetworkClient
@@ -20,9 +20,9 @@ fun main(args: Array<String>) {
 
     Thread.sleep(1000)
     // sendMessage(GetSourceConfig(5))
-    client.sendMessage(SetSourceDisplayLine(5, 1, "foo"))
-    client.sendMessage(SetSourceDisplayLine(5, 2, "bar"))
-    client.sendMessage(SetSourceDisplayLine(5, 3, "baz"))
+    client.sendMessage(SetSourceDisplayLine(5, 1, "Spotify"))
+    client.sendMessage(SetSourceDisplayLine(5, 2, ""))
+    client.sendMessage(SetSourceDisplayLine(5, 3, ""))
     client.sendMessage(SetSourceDisplayLine(5, 4, ""))
 
     val duration = 10 * Duration.of(2, ChronoUnit.MINUTES).seconds.toInt()
@@ -38,7 +38,8 @@ fun main(args: Array<String>) {
 class Client(private val host: String, private val port: Int = 5006) {
 
     private val logger = KotlinLogging.logger {}
-    val eventBus:EventBus = EventBus.builder().build()
+    //val eventBus:EventBus = EventBus.builder().build()
+    val eventBus:EventBus = EventBus
     private lateinit var networkClient: NetworkClient
     private val messageQueue = MessageQueue()
 

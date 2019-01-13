@@ -1,8 +1,8 @@
 package org.nuvo.message.receive
 
 import mu.KotlinLogging
-import org.greenrobot.eventbus.EventBus
 import org.nuvo.MessageQueue
+import org.nuvo.bus.EventBus
 
 class Transport(eventBus: EventBus, messageQueue: MessageQueue) : AbstractReceivableMessage("""#Z(?<zone>\d+)S(?<source>\d)(?<command>PLAYPAUSE|NEXT|PREV)""", eventBus, messageQueue) {
 

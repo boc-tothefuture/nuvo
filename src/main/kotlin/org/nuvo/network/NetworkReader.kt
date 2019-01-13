@@ -3,7 +3,7 @@ package org.nuvo.network
 import kotlinx.coroutines.io.ByteReadChannel
 import kotlinx.coroutines.runBlocking
 import mu.KotlinLogging
-import org.greenrobot.eventbus.EventBus
+import org.nuvo.bus.EventBus
 import org.nuvo.message.receive.*
 import org.nuvo.message.transmit.TransmittableMessage
 import java.util.concurrent.LinkedBlockingQueue
